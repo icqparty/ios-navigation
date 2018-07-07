@@ -18,6 +18,10 @@
 		15B51EC820F0DF4B003A14AE /* SegueColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51EC720F0DF4B003A14AE /* SegueColorViewController.swift */; };
 		15B51ECB20F0EA86003A14AE /* InCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51ECA20F0EA86003A14AE /* InCodeViewController.swift */; };
 		15B51ECD20F0EE26003A14AE /* InCodeColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51ECC20F0EE26003A14AE /* InCodeColorViewController.swift */; };
+		15B51ED020F0EFEB003A14AE /* RouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51ECF20F0EFEB003A14AE /* RouterViewController.swift */; };
+		15B51ED220F0EFED003A14AE /* RouterColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51ED120F0EFED003A14AE /* RouterColorViewController.swift */; };
+		15B51ED420F0F0D5003A14AE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51ED320F0F0D5003A14AE /* Router.swift */; };
+		15B51ED620F0F2BA003A14AE /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51ED520F0F2BA003A14AE /* Scenes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		15B51EC720F0DF4B003A14AE /* SegueColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueColorViewController.swift; sourceTree = "<group>"; };
 		15B51ECA20F0EA86003A14AE /* InCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCodeViewController.swift; sourceTree = "<group>"; };
 		15B51ECC20F0EE26003A14AE /* InCodeColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCodeColorViewController.swift; sourceTree = "<group>"; };
+		15B51ECF20F0EFEB003A14AE /* RouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterViewController.swift; sourceTree = "<group>"; };
+		15B51ED120F0EFED003A14AE /* RouterColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterColorViewController.swift; sourceTree = "<group>"; };
+		15B51ED320F0F0D5003A14AE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		15B51ED520F0F2BA003A14AE /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,24 +74,16 @@
 		15B51EAA20F0D9BD003A14AE /* iOS-navigation */ = {
 			isa = PBXGroup;
 			children = (
+				15B51ECE20F0EF87003A14AE /* RouterNavigation */,
 				15B51EC920F0EA35003A14AE /* InCodeNavigation */,
 				15B51EC620F0DEDD003A14AE /* SegueNavigation */,
 				15B51EAB20F0D9BD003A14AE /* AppDelegate.swift */,
 				15B51EAF20F0D9BD003A14AE /* Main.storyboard */,
-				15B51EC520F0DE2B003A14AE /* Storyboards */,
 				15B51EB220F0D9BF003A14AE /* Assets.xcassets */,
 				15B51EB420F0D9BF003A14AE /* LaunchScreen.storyboard */,
 				15B51EB720F0D9BF003A14AE /* Info.plist */,
 			);
 			path = "iOS-navigation";
-			sourceTree = "<group>";
-		};
-		15B51EC520F0DE2B003A14AE /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				15B51EC320F0DE19003A14AE /* RouterNavigation.storyboard */,
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		15B51EC620F0DEDD003A14AE /* SegueNavigation */ = {
@@ -104,6 +104,18 @@
 				15B51ECC20F0EE26003A14AE /* InCodeColorViewController.swift */,
 			);
 			path = InCodeNavigation;
+			sourceTree = "<group>";
+		};
+		15B51ECE20F0EF87003A14AE /* RouterNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				15B51EC320F0DE19003A14AE /* RouterNavigation.storyboard */,
+				15B51ECF20F0EFEB003A14AE /* RouterViewController.swift */,
+				15B51ED120F0EFED003A14AE /* RouterColorViewController.swift */,
+				15B51ED320F0F0D5003A14AE /* Router.swift */,
+				15B51ED520F0F2BA003A14AE /* Scenes.swift */,
+			);
+			path = RouterNavigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,10 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B51ED420F0F0D5003A14AE /* Router.swift in Sources */,
 				15B51ECB20F0EA86003A14AE /* InCodeViewController.swift in Sources */,
+				15B51ED620F0F2BA003A14AE /* Scenes.swift in Sources */,
 				15B51EAC20F0D9BD003A14AE /* AppDelegate.swift in Sources */,
 				15B51EC820F0DF4B003A14AE /* SegueColorViewController.swift in Sources */,
+				15B51ED220F0EFED003A14AE /* RouterColorViewController.swift in Sources */,
 				15B51ECD20F0EE26003A14AE /* InCodeColorViewController.swift in Sources */,
+				15B51ED020F0EFEB003A14AE /* RouterViewController.swift in Sources */,
 				15B51EBE20F0DB20003A14AE /* SegueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
