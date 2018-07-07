@@ -5,7 +5,7 @@
 import UIKit
 
 class RouterColorViewController: UIViewController {
-
+    
     var color: UIColor?
     
     @IBOutlet weak var closeButton: UIButton!

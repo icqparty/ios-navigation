@@ -5,19 +5,17 @@
 import UIKit
 
 protocol Router {
-    func perorm(transition: Transition, config: Configuration?)
+    func perorm(transition: Transition, to: () -> Scene)
 }
 
 enum Transition {
-    case push(Scene)
-    case present(Scene)
+    case push
+    case present
 }
 
 protocol Scene {
     var viewController: UIViewController { get }
 }
-
-typealias Configuration = (_ viewController: UIViewController) -> Void
 
 struct AppRouter: Router {
     private let root: UINavigationController
@@ -26,16 +24,12 @@ struct AppRouter: Router {
         self.root = root
     }
     
-    func perorm(transition: Transition, config: Configuration? = nil) {
+    func perorm(transition: Transition, to: () -> Scene) {
         switch transition {
-        case .push(let scene):
-            let viewController = scene.viewController
-            config?(viewController)
-            root.pushViewController(viewController, animated: true)
-        case .present(let scene):
-            let viewController = scene.viewController
-            config?(viewController)
-            root.present(viewController, animated: true, completion: nil)
+        case .push:
+            root.pushViewController(to().viewController, animated: true)
+        case .present:
+            root.present(to().viewController, animated: true, completion: nil)
         }
     }
 }

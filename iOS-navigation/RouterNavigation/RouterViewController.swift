@@ -15,13 +15,13 @@ class RouterViewController: UITableViewController {
     
     private let sections: [Section] = [
         .init(title: "Push",
-              transition: .push(RouterScene.colorViewController),
+              transition: .push,
               cellReuseIdentifier: "PushCell",
               cells: [("Push red controller", .red),
                       ("Push green controller", .green),
                       ("Push blue controller", .blue)]),
         .init(title: "Present",
-              transition: .present(RouterScene.colorViewController),
+              transition: .present,
               cellReuseIdentifier: "PresentCell",
               cells: [("Present red controller", .red),
                       ("Present green controller", .green),
@@ -43,9 +43,10 @@ extension RouterViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let section = sections[indexPath.section]
         router?.perorm(transition: section.transition) {
-            ($0 as? RouterColorViewController)?.title = section.title
-            ($0 as? RouterColorViewController)?.color = section.cells[indexPath.row].color
-        }
+            RouterScene.colorViewController({
+                $0.title = section.title
+                $0.color = section.cells[indexPath.row].color
+            })}
     }
 }
 
