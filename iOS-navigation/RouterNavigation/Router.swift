@@ -5,7 +5,7 @@
 import UIKit
 
 protocol Router {
-    func perorm(transition: Transition, to: () -> Scene)
+    func perorm(transition: Transition, to: Scene)
 }
 
 enum Transition {
@@ -24,12 +24,12 @@ struct AppRouter: Router {
         self.root = root
     }
     
-    func perorm(transition: Transition, to: () -> Scene) {
+    func perorm(transition: Transition, to: Scene) {
         switch transition {
         case .push:
-            root.pushViewController(to().viewController, animated: true)
+            root.pushViewController(to.viewController, animated: true)
         case .present:
-            root.present(to().viewController, animated: true, completion: nil)
+            root.present(to.viewController, animated: true, completion: nil)
         }
     }
 }

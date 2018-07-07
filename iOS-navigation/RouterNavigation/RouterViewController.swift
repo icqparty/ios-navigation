@@ -42,11 +42,11 @@ class RouterViewController: UITableViewController {
 extension RouterViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let section = sections[indexPath.section]
-        router?.perorm(transition: section.transition) {
-            RouterScene.colorViewController({
-                $0.title = section.title
-                $0.color = section.cells[indexPath.row].color
-            })}
+        let scene: RouterScene = .colorViewController({
+            $0.title = section.title
+            $0.color = section.cells[indexPath.row].color
+        })
+        router?.perorm(transition: section.transition, to: scene)
     }
 }
 
