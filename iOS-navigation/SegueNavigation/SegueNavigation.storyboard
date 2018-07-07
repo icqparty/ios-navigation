@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="1377" y="-54"/>
         </scene>
-        <!--Color View Controller-->
+        <!--Segue Color View Controller-->
         <scene sceneID="33r-hT-KmM">
             <objects>
-                <viewController id="NYH-qQ-O2b" customClass="ColorViewController" customModule="iOS_navigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NYH-qQ-O2b" customClass="SegueColorViewController" customModule="iOS_navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fMw-hs-bOK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,8 +106,9 @@
         <scene sceneID="D3A-Nx-WVr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="inI-WB-fTf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Segue" image="arrow" id="3ko-Kw-yY8"/>
+                    <tabBarItem key="tabBarItem" title="Segue" image="arrow" id="yet-jO-8j5"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eOC-Pf-WKH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

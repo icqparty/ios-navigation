@@ -4,7 +4,7 @@
 
 import UIKit
 
-class ColorViewController: UIViewController {
+class SegueColorViewController: UIViewController {
 
     var color: UIColor?
     @IBOutlet weak var closeButton: UIButton!

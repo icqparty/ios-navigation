@@ -15,7 +15,9 @@
 		15B51EC020F0DDD6003A14AE /* SegueNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B51EBF20F0DDD6003A14AE /* SegueNavigation.storyboard */; };
 		15B51EC220F0DE05003A14AE /* InCodeNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B51EC120F0DE05003A14AE /* InCodeNavigation.storyboard */; };
 		15B51EC420F0DE19003A14AE /* RouterNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B51EC320F0DE19003A14AE /* RouterNavigation.storyboard */; };
-		15B51EC820F0DF4B003A14AE /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51EC720F0DF4B003A14AE /* ColorViewController.swift */; };
+		15B51EC820F0DF4B003A14AE /* SegueColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51EC720F0DF4B003A14AE /* SegueColorViewController.swift */; };
+		15B51ECB20F0EA86003A14AE /* InCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51ECA20F0EA86003A14AE /* InCodeViewController.swift */; };
+		15B51ECD20F0EE26003A14AE /* InCodeColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51ECC20F0EE26003A14AE /* InCodeColorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,9 @@
 		15B51EBF20F0DDD6003A14AE /* SegueNavigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SegueNavigation.storyboard; sourceTree = "<group>"; };
 		15B51EC120F0DE05003A14AE /* InCodeNavigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InCodeNavigation.storyboard; sourceTree = "<group>"; };
 		15B51EC320F0DE19003A14AE /* RouterNavigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RouterNavigation.storyboard; sourceTree = "<group>"; };
-		15B51EC720F0DF4B003A14AE /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		15B51EC720F0DF4B003A14AE /* SegueColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueColorViewController.swift; sourceTree = "<group>"; };
+		15B51ECA20F0EA86003A14AE /* InCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCodeViewController.swift; sourceTree = "<group>"; };
+		15B51ECC20F0EE26003A14AE /* InCodeColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCodeColorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		15B51EAA20F0D9BD003A14AE /* iOS-navigation */ = {
 			isa = PBXGroup;
 			children = (
+				15B51EC920F0EA35003A14AE /* InCodeNavigation */,
 				15B51EC620F0DEDD003A14AE /* SegueNavigation */,
 				15B51EAB20F0D9BD003A14AE /* AppDelegate.swift */,
 				15B51EAF20F0D9BD003A14AE /* Main.storyboard */,
@@ -76,7 +81,6 @@
 		15B51EC520F0DE2B003A14AE /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				15B51EC120F0DE05003A14AE /* InCodeNavigation.storyboard */,
 				15B51EC320F0DE19003A14AE /* RouterNavigation.storyboard */,
 			);
 			path = Storyboards;
@@ -87,9 +91,19 @@
 			children = (
 				15B51EBF20F0DDD6003A14AE /* SegueNavigation.storyboard */,
 				15B51EBD20F0DB20003A14AE /* SegueViewController.swift */,
-				15B51EC720F0DF4B003A14AE /* ColorViewController.swift */,
+				15B51EC720F0DF4B003A14AE /* SegueColorViewController.swift */,
 			);
 			path = SegueNavigation;
+			sourceTree = "<group>";
+		};
+		15B51EC920F0EA35003A14AE /* InCodeNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				15B51EC120F0DE05003A14AE /* InCodeNavigation.storyboard */,
+				15B51ECA20F0EA86003A14AE /* InCodeViewController.swift */,
+				15B51ECC20F0EE26003A14AE /* InCodeColorViewController.swift */,
+			);
+			path = InCodeNavigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B51ECB20F0EA86003A14AE /* InCodeViewController.swift in Sources */,
 				15B51EAC20F0D9BD003A14AE /* AppDelegate.swift in Sources */,
-				15B51EC820F0DF4B003A14AE /* ColorViewController.swift in Sources */,
+				15B51EC820F0DF4B003A14AE /* SegueColorViewController.swift in Sources */,
+				15B51ECD20F0EE26003A14AE /* InCodeColorViewController.swift in Sources */,
 				15B51EBE20F0DB20003A14AE /* SegueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

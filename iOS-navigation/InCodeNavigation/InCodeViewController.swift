@@ -4,21 +4,29 @@
 
 import UIKit
 
-class SegueViewController: UITableViewController {
+class InCodeViewController: UITableViewController {
     
     private struct Section {
         let title: String
+        let transition: Transition
         let cellReuseIdentifier: String
         let cells: [(title: String, color: UIColor)]
+        
+        enum Transition {
+            case push
+            case present
+        }
     }
     
     private let sections: [Section] = [
         .init(title: "Push",
+              transition: .push,
               cellReuseIdentifier: "PushCell",
               cells: [("Push red controller", .red),
                       ("Push green controller", .green),
                       ("Push blue controller", .blue)]),
         .init(title: "Present",
+              transition: .present,
               cellReuseIdentifier: "PresentCell",
               cells: [("Present red controller", .red),
                       ("Present green controller", .green),
@@ -27,25 +35,32 @@ class SegueViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Segue navigation"
+        title = "InCode navigation"
     }
 }
 
-// MARK: - Navigation
-extension SegueViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let viewController = segue.destination as? SegueColorViewController,
-            let tableViewCell = sender as? UITableViewCell,
-            let indexPath = tableView.indexPath(for: tableViewCell)else {
+// MARK: - Table view delegate
+extension InCodeViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let inCodeStoryboard = UIStoryboard(name: "InCodeNavigation", bundle: nil)
+        guard let viewController = inCodeStoryboard.instantiateViewController(withIdentifier: "InCodeColorViewController") as? InCodeColorViewController else {
                 return
         }
-        viewController.color = sections[indexPath.section].cells[indexPath.row].color
-        viewController.title = sections[indexPath.section].title
+        let section = sections[indexPath.section]
+        viewController.title = section.title
+        viewController.color = section.cells[indexPath.row].color
+        
+        switch section.transition {
+        case .push:
+            navigationController?.pushViewController(viewController, animated: true)
+        case .present:
+            present(viewController, animated: true, completion: nil)
+        }
     }
 }
 
 // MARK: - Table view data source
-extension SegueViewController {
+extension InCodeViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
